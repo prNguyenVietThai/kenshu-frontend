@@ -1,0 +1,299 @@
+.hidden {
+    display: none;
+}
+
+.header {
+    width: 100%;
+    height: 75px;
+    background-color: #24436F;
+}
+
+.header-container {
+    width: 80%;
+    height: 75px;
+    margin: 0px auto;
+}
+
+.header-small-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.header-small-container .logo {
+    width: 40%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.logo .frame {
+    width: 122px;
+    height: 22px;
+    background: url("./logo.png") no-repeat;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    margin-right: 18px;
+}
+
+.logo .text {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #BFC9D7;
+}
+
+.header-small-container .release {
+    width: 22%;
+    background: #345584;
+    border-radius: 4px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.release span > a {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.release span.line {
+    width: 13px;
+    height: 0px;
+
+    border: 1px solid #BFC9D7;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.header-small-container .keyword {
+    width: 30%;
+    height: 30px;
+    padding: 0px;
+    display: flex;
+}
+
+.keyword input {
+    height: 30px;
+    width: 85%;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 4px 0px 0px 4px;
+    padding-left: 15px;
+}
+
+.keyword input::placeholder {
+    height: 25px;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+
+    color: #BBBBBB;
+}
+
+.keyword button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #3081C9 url("./search.png") no-repeat center;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+}
+
+.main-header span > a {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+
+    color: #BFC9D7;
+}
+
+.main-header span.active > a {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.main-header span.line {
+    width: 13px;
+    height: 0px;
+    border: none;
+    border-top: 1px solid #BFC9D7;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.category-header {
+    width: 100%;
+}
+
+.category-header .categories {
+    width: 100%;
+    margin: 0px auto;
+    background-color: #FFFFFF;
+}
+
+.categories .list {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list span > a{
+    margin: 0px 10px;
+    color: #294C7A;
+    text-decoration: none;
+}
+
+.list span.active > a {
+    font-weight: bold;
+}
+
+.categories .line {
+    width: 100%;
+    height: 0px;
+    border: none;
+    border-top: 1px solid #E4E4E4;
+}
+
+.ranking {
+    width: 100%;
+    height: 263px;
+    background: #F2F2F2;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ranking > ol.ranking-list {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ranking-list .article-box {
+    position: relative;
+    display: block;
+    width: 181px;
+    height: 218px;
+    background: #fff;
+    margin: 0px 8px;
+}
+
+.article-box .image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.image .rank {
+    width: 24px;
+    height: 24px;
+    background-color: #294C7A;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    counter-reset: ranking;
+}
+
+.image .rank::before{
+    content: counter(ranking);
+    counter-increment: ranking;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.article-box .content {
+    width: 100%;
+    height: 118px;
+    flex-direction: column;
+}
+
+.article-box > .content > .title {
+    height: 46%;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #3B3B3B;
+    padding: 6px 10px 0px 10px;
+}
+
+.article-box > .content > .note {
+    height: 50%;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 6px 10px;
+}
+
+.note > div {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+
+    /* sub_text */
+
+    color: #A2A2A2;
+}
+
+div.timer {
+    display: flex;
+    align-items: center;
+}
+
+div.icon {
+    width: 15px;
+    height: 15px;
+    background: url("./icon.png") no-repeat center;
+}
+
+.timer > .date {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
