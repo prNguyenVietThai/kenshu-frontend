@@ -432,8 +432,9 @@ button.btn-primary {
 
 .main .side {
     width: 312px;
-    min-height: 200px;
     float: right;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E4E4E4;;
 }
 
 .keywords .title {
@@ -455,7 +456,7 @@ button.btn-primary {
 span.badge {
     background-color: #F1F1F1;
     border-radius: 11px;
-    padding: 2px 10px;
+    padding: 0px 8px;
     margin: 4px;
     font-family: Hiragino Kaku Gothic ProN;
     font-style: normal;
