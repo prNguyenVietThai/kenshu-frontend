@@ -243,6 +243,7 @@
 }
 
 .image .rank::before{
+    display: block;
     font-family: Roboto;
     font-style: italic;
     font-weight: bold;
@@ -291,15 +292,281 @@
 
 div.timer {
     display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 4px;
 }
 
 .timer .icon {
     width: 15px;
-    height: 15px;
+    height: 13px;
     background: url("./icon.png") no-repeat center;
 }
 
-.timer > .date {
+.timer .date {
     margin-left: 5px;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 100%;
+
+    color: #A2A2A2;
 }
 
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 1126px;
+    padding: 50px 0px 50px 0;
+}
+
+.main::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.main .contents {
+    width: 779px;
+    min-height: 100px;
+    float: left;
+}
+
+.contents .title {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 20px;
+
+    color: #3B3B3B;
+}
+
+.contents .wrap {
+    margin: 0px;
+}
+
+.wrap .articles {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles .box {
+    border-bottom: 1px solid #E4E4E4;
+    width: 380px;
+    height: 118px;
+}
+
+.box .box-body {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.box .box-body::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box-title {
+    width: 265px;
+    float: left;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: #3B3B3B;
+}
+
+.box-image {
+    width: 100px;
+    height: 66px;
+    float: right;
+}
+
+.box-footer {
+    display: block;
+}
+
+.text-note {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 100%;
+
+    color: #A2A2A2;
+}
+
+.left-10 {
+    margin-left: 10px;
+}
+
+.wrap .more-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+button.btn-primary {
+    color: #FFF;
+    width: 110px;
+    height: 38px;
+    background-color: #3081C9;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    border: none;
+}
+
+.main .side {
+    width: 312px;
+    min-height: 200px;
+    float: right;
+}
+
+.keywords .title {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: #3B3B3B;
+}
+
+.keywords .list {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+span.badge {
+    background-color: #F1F1F1;
+    border-radius: 11px;
+    padding: 2px 10px;
+    margin: 4px;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+
+    color: #3B3B3B;
+}
+
+span.more {
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    box-sizing: border-box;
+    border-radius: 11px;
+}
+
+span.more:hover {
+    background-color: #BFC9D7;
+}
+
+span.more>a {
+    color: #3B3B3B;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 356px;
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .content {
+    position: absolute;
+    width: 1126px;
+    height: 296px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer .content .list {
+    display: flex;
+    vertical-align: top;
+    justify-content: space-between;
+}
+
+.footer .content .list .item {
+    width: 280px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.footer .content .list .item div {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 9px 0px;
+    color: #797979;
+}
+
+.footer .content .list .item div.title {
+    margin-top: 0px;
+    line-height: 13px;
+    font-weight: bold;
+    height: 13px;
+}
+
+.footer .content .line2 {
+    height: 0px;
+    margin-bottom: 14px;
+    border: none;
+    border-top: 1px solid #E0E0E0;
+}
+
+.footer .content .term {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.footer .content .term span {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+
+    display: flex;
+    align-items: center;
+
+    color: #797979;
+}
+
+.footer .content .copyright {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 11px;
+
+    display: flex;
+    align-items: center;
+
+    color: #797979;
+    margin-bottom: 9px;
+}
