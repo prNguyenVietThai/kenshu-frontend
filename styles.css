@@ -9,7 +9,7 @@
 }
 
 .header-container {
-    width: 80%;
+    width: 1126px;
     height: 75px;
     margin: 0px auto;
 }
@@ -22,8 +22,9 @@
 }
 
 .header-small-container .logo {
-    width: 40%;
+    width: 485px;
     height: 35px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
 }
@@ -51,16 +52,14 @@
 }
 
 .header-small-container .release {
-    width: 22%;
+    width: 316px;
     background: #345584;
     border-radius: 4px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-right: 10px;
 }
 
 .release span > a {
@@ -88,7 +87,7 @@
 }
 
 .header-small-container .keyword {
-    width: 30%;
+    width: 288px;
     height: 30px;
     padding: 0px;
     display: flex;
@@ -96,7 +95,7 @@
 
 .keyword input {
     height: 30px;
-    width: 85%;
+    width: 258px;
     border: none;
     background: #FFFFFF;
     border-radius: 4px 0px 0px 4px;
@@ -109,16 +108,28 @@
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
-
     color: #BBBBBB;
 }
 
+.keyword input:focus {
+    outline: none;
+}
+
 .keyword button {
+    cursor: pointer;
     width: 30px;
     height: 30px;
     border: none;
     background: #3081C9 url("./search.png") no-repeat center;
     border-radius: 0px 4px 4px 0px;
+}
+
+.keyword button:hover {
+    background-color: #3065C9
+}
+
+.keyword button:focus {
+    outline: none;
 }
 
 .main-header {
@@ -199,11 +210,11 @@
 .ranking > ol.ranking-list {
     padding: 0px;
     margin: 0px;
-    width: 100%;
+    width: 1126px;
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .ranking-list .article-box {
@@ -212,7 +223,6 @@
     width: 181px;
     height: 218px;
     background: #fff;
-    margin: 0px 8px;
 }
 
 .article-box .image {
@@ -229,12 +239,10 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    counter-reset: ranking;
 }
 
 .image .rank::before{
-    content: counter(ranking);
-    counter-increment: ranking;
+    content: '1';
     font-family: Roboto;
     font-style: italic;
     font-weight: bold;
@@ -276,24 +284,20 @@
     font-size: 12px;
     line-height: 18px;
 
-    /* sub_text */
-
     color: #A2A2A2;
 }
 
 div.timer {
     display: flex;
-    align-items: center;
 }
 
-div.icon {
+.timer .icon {
     width: 15px;
     height: 15px;
     background: url("./icon.png") no-repeat center;
 }
 
 .timer > .date {
-    margin-top: 2px;
     margin-left: 5px;
 }
 
