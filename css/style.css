@@ -450,6 +450,7 @@ section.side > .title {
     font-size: 13px;
     line-height: 13px;
     color: #A2A2A2;
+    margin-left: 10px;
 }
 
 .main-body > .side {
