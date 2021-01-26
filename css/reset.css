@@ -2,3 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+
+body *{
+    font-family: Hiragino Kaku Gothic ProN;
+    font-style: normal;
+    font-weight: normal;
+}
