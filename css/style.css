@@ -6,6 +6,7 @@
 
 .link:hover {
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .link--hover-not-underline:hover {
@@ -81,15 +82,11 @@ List have 2 type: vertical & horizontal.
     font-size: 13px;
     line-height: 13px;
     color: #FFFFFF;
-}
-
-.list__item:nth-child(even) {
     display: flex;
     align-items: center;
 }
 
-.list__item--border:nth-child(even)::before,
-.list__item--border:nth-child(even)::after {
+.list__item--border:not(:last-child)::after {
     content: '';
     display: block;
     width: 13px;
@@ -137,7 +134,7 @@ List have 2 type: vertical & horizontal.
 }
 
 
-.active > .link {
+.is-active > .link {
     font-weight: bold;
 }
 
@@ -357,7 +354,7 @@ List have 2 type: vertical & horizontal.
     margin-top: 8px;
 }
 
-.main-header li.active > a {
+.main-header li.is-active > a {
     color: #FFFFFF;
     font-weight: bold;
 }
@@ -525,8 +522,7 @@ List have 2 type: vertical & horizontal.
     padding: 15px 0px;
 }
 
-.footer-term .list__item,
-.footer-term .list__item a {
+.footer-term .list__item {
     margin-right: 10px;
     color: #797979;
 }
