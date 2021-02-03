@@ -103,6 +103,8 @@ List have 2 type: vertical & horizontal.
     box-sizing: border-box;
     width: 100%;
     height: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .form-search input {
@@ -152,7 +154,7 @@ List have 2 type: vertical & horizontal.
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.box .box__number {
+.box__number {
     width: 24px;
     height: 24px;
     background: #294C7A;
@@ -167,7 +169,7 @@ List have 2 type: vertical & horizontal.
     color: #FFFFFF;
 }
 
-.box .box__number:before {
+.box__number:before {
     content: '1';
     display: block;
     text-align: center;
@@ -175,27 +177,27 @@ List have 2 type: vertical & horizontal.
     counter-increment: number;
 }
 
-.box .box__image {
+.box__image {
     display: block;
     width: 100%;
     height: 100px;
 }
 
-.box .box__body {
+.box__body {
     display: block;
     position: relative;
     width: 100%;
     min-height: 118px;
 }
 
-.box .box__body-title {
+.box__body-title {
     font-size: 13px;
     line-height: 18px;
     color: #3B3B3B;
     padding: 8px 10px;
 }
 
-.box .box__body-footer {
+.box__body-footer {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -257,7 +259,7 @@ List have 2 type: vertical & horizontal.
     border-bottom: 1px solid #E4E4E4;
 }
 
-.article .article__title {
+.article__title {
     position: absolute;
     top: 15px;
     left: 0px;
@@ -269,18 +271,18 @@ List have 2 type: vertical & horizontal.
     margin-bottom: 14px;
 }
 
-.article .article__title {
+.article__title {
     color: #3B3B3B;
 }
 
-.article .article__image {
+.article__image {
     position: absolute;
     top: 15px;
     right: 0px;
     width: 100px;
 }
 
-.article .article__timer {
+.article__timer {
     position: absolute;
     bottom: 10px;
     left: 0px;
@@ -288,7 +290,7 @@ List have 2 type: vertical & horizontal.
     align-items: center;
 }
 
-.article .article__timer-info {
+.article__timer-info {
     font-size: 13px;
     line-height: 13px;
     color: #A2A2A2;
@@ -333,6 +335,9 @@ List have 2 type: vertical & horizontal.
     height: 30px;
     padding-top: 13px;
     border-radius: 0px;
+    display: flex;
+    align-items: center;
+
 }
 
 .release {
@@ -341,6 +346,9 @@ List have 2 type: vertical & horizontal.
     background: #345584;
     border-radius: 4px;
     margin-left: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .keyword {
@@ -419,7 +427,7 @@ List have 2 type: vertical & horizontal.
     width: 100%;
 }
 
-.main-container {
+.main__container {
     width: 1126px;
     display: flex;
     justify-content: space-between;
@@ -427,11 +435,11 @@ List have 2 type: vertical & horizontal.
     padding: 20px 0px;
 }
 
-.main-container > .contents {
+.main__contents {
     width: 779px;
 }
 
-.contents .contents__title {
+.main__contents-title {
     font-weight: bold;
     font-size: 24px;
     line-height: 36px;
@@ -439,14 +447,14 @@ List have 2 type: vertical & horizontal.
     margin-bottom: 14px;
 }
 
-.contents .contents__body {
+.main__contents-body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.contents .contents__footer {
+.main__contents-footer {
     width: 100%;
     padding: 20px 20px 10px 20px;
     display: flex;
@@ -454,24 +462,24 @@ List have 2 type: vertical & horizontal.
 }
 
 /* side */
-.side {
+.main__side {
     width: 312px;
 }
 
-.side .keywords {
+.main__side .keywords {
     margin-top: 30px;
     width: 100%;
     padding-bottom: 5px;
     border-bottom: 1px solid #e4e4e4;
 }
 
-.side .side__title {
+.main__side-title {
     font-size: 18px;
     line-height: 36px;
     margin-bottom: 20px;
 }
 
-.side .side__body {
+.main__side-body {
     width: 100%;
     padding-bottom: 5px;
     border-bottom: 1px solid #e4e4e4;
@@ -486,12 +494,12 @@ List have 2 type: vertical & horizontal.
     background: #FAFAFA;
 }
 
-.footer .footer__container {
+.footer__container {
     width: 1126px;
     margin: 0px auto;
 }
 
-.footer .footer__list {
+.footer__list {
     padding-bottom: 20px;
     border-bottom: 1px solid #e4e4e4;
     display: flex;
@@ -502,7 +510,7 @@ List have 2 type: vertical & horizontal.
     width: 281px;
 }
 
-.footer-menu .footer-menu__title {
+.footer-menu__title {
     display: block;
     height: 13px;
     font-size: 13px;
@@ -510,7 +518,7 @@ List have 2 type: vertical & horizontal.
     margin: 15px 0px;
 }
 
-.footer-menu .footer-menu__item {
+.footer-menu__item {
     color: #797979;
     height: 13px;
     font-size: 13px;
