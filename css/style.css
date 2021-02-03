@@ -74,18 +74,6 @@ List have 2 type: vertical & horizontal.
     align-items: center;
 }
 
-.list__item--border:not(:last-child)::after {
-    content: '';
-    display: block;
-    width: 13px;
-    height: 0px;
-    border: none;
-    border-top: 1px solid #BFC9D7;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-}
-
 /* form search */
 .form-search {
     box-sizing: border-box;
@@ -311,9 +299,6 @@ List have 2 type: vertical & horizontal.
     border-radius: 13px;
     padding: 4px 10px;
     margin: 4px;
-}
-
-.badge {
     font-size: 12px;
     line-height: 22px;
     color: #3B3B3B;

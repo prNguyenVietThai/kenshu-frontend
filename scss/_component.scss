@@ -49,17 +49,16 @@ ul, ol {
 %block { display: block; }
 
 .logo__frame {
-  @extend  %block;
+  @extend %block;
   width: 122px;
   height: 22px;
 }
 
 .logo__txt {
-  @extend  %block;
+  @extend %block;
   width: 335px;
   vertical-align: middle;
   margin-left: 15px;
-
 }
 
 /*
@@ -71,9 +70,6 @@ List have 2 type: vertical & horizontal.
   &--horizontal {
     display: flex;
     align-items: center;
-    &--jc { justify-content: center; }
-    &--jsb { justify-content: space-between; }
-    &--fww { flex-wrap: wrap; }
   }
   & &__item {
     @include txt(13px, #FFFFFF, 13px);
@@ -92,12 +88,6 @@ List have 2 type: vertical & horizontal.
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-}
-
-.list__item--border {
-  &:not(:last-child) {
-    &::after { @extend %line; }
-  }
 }
 
 /* form search */
@@ -184,25 +174,29 @@ List have 2 type: vertical & horizontal.
       width: 100%;
       box-sizing: border-box;
       padding: 2px 10px 4px 10px;
+      &-timer {
+        display: flex;
+        height: 16px;
+        align-items: center;
+        font-size: 13px;
+        line-height: 16px;
+        color: #A2A2A2;
+        &::before {
+          content: url("../images/icon.png");
+          display: flex;
+          width: 15px;
+          height: 14px;
+          align-items: center;
+          justify-content: center;
+          margin-right: 5px;
+        }
+      }
+      &-note {
+        font-size: 13px;
+        line-height: 16px;
+        color: #A2A2A2;
+      }
     }
-  }
-}
-
-.note { @include txt(13px, #A2A2A2, 16px); }
-
-/* Time - component show time */
-.time {
-  display: flex;
-  height: 16px;
-  align-items: center;
-  &::before {
-    @include timer-icon;
-    display: flex;
-    width: 15px;
-    height: 14px;
-    align-items: center;
-    justify-content: center;
-    margin-right: 5px;
   }
 }
 
@@ -250,6 +244,22 @@ List have 2 type: vertical & horizontal.
     left: 0px;
     display: flex;
     align-items: center;
+    &-note {
+      font-size: 13px;
+      line-height: 16px;
+      color: #A2A2A2;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: url("../images/icon.png");
+        display: flex;
+        width: 15px;
+        height: 14px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+      }
+    }
   }
   &__timer-info {
     @include txt(13px, #A2A2A2, 13px);
