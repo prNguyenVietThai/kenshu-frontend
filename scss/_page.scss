@@ -13,6 +13,8 @@
     height: 30px;
     padding-top: 13px;
     border-radius: 0px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -22,6 +24,9 @@
   background: #345584;
   border-radius: 4px;
   margin-left: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .keyword {
@@ -83,64 +88,58 @@
   }
 }
 
-.ranking__item { @extend %block }
+.ranking__item { display: block; }
 
 /* main */
 .main {
   width: 100%;
-  &-container {
+  &__container {
     width: 1126px;
     display: flex;
     justify-content: space-between;
     margin: 0px auto;
     padding: 20px 0px;
-    & > .contents {
-      width: 779px;
+  }
+  &__contents {
+    width: 779px;
+    &-title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      color: #3B3B3B;
+      margin-bottom: 14px;
+    }
+    &-body {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &-footer {
+      width: 100%;
+      padding: 20px 20px 10px 20px;
+      display: flex;
+      justify-content: center;
     }
   }
-
-}
-
-.contents {
-  & &__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 36px;
-    color: #3B3B3B;
-    margin-bottom: 14px;
-  }
-  & &__body {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  & &__footer {
-    width: 100%;
-    padding: 20px 20px 10px 20px;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-/* side */
-.side {
-  width: 312px;
-  .keywords {
-    margin-top: 30px;
-    width: 100%;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #e4e4e4;
-  }
-  & &__title {
-    font-size: 18px;
-    line-height: 36px;
-    margin-bottom: 20px;
-  }
-  & &__body {
-    width: 100%;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #e4e4e4;
+  &__side {
+    width: 312px;
+    .keywords {
+      margin-top: 30px;
+      width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e4e4e4;
+    }
+    &-title {
+      font-size: 18px;
+      line-height: 36px;
+      margin-bottom: 20px;
+    }
+    &-body {
+      width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e4e4e4;
+    }
   }
 }
 
