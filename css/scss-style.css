@@ -45,18 +45,19 @@ ul, ol {
 List
 List have 2 type: vertical & horizontal.
 */
-.list {
+.list, .list--horizontal {
   width: 100%; }
-  .list--horizontal {
-    display: flex;
-    align-items: center; }
-  .list .list__item {
-    font-size: 13px;
-    line-height: 13px;
-    color: #FFFFFF;
-    font-weight: normal;
-    display: flex;
-    align-items: center; }
+
+.list--horizontal {
+  display: flex;
+  align-items: center; }
+.list .list__item {
+  font-size: 13px;
+  line-height: 13px;
+  color: #FFFFFF;
+  font-weight: normal;
+  display: flex;
+  align-items: center; }
 
 .release__list-item:not(:last-child)::after, .main-header__list-item:not(:last-child)::after {
   content: '';
@@ -173,7 +174,7 @@ List have 2 type: vertical & horizontal.
     font-weight: normal; }
 
 /* button */
-.btn {
+.btn, .btn--primary {
   width: 110px;
   min-height: 38px;
   border: none;
@@ -184,11 +185,12 @@ List have 2 type: vertical & horizontal.
   color: #000;
   font-weight: bold;
   cursor: pointer; }
-  .btn--primary {
-    background: #3081C9;
-    color: #FFFFFF; }
-    .btn--primary:hover {
-      background: #1db0e5; }
+
+.btn--primary {
+  background: #3081C9;
+  color: #FFFFFF; }
+  .btn--primary:hover {
+    background: #1db0e5; }
 
 /* article */
 .article {
