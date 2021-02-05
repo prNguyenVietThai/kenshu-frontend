@@ -12,9 +12,7 @@
   font-weight: $fontWeight;
 }
 
-a {
-  color: inherit;
-}
+a { color: inherit; }
 
 .link {
   text-decoration: none;
@@ -24,14 +22,10 @@ a {
     text-decoration: underline;
     font-weight: bold;
   }
-  &--hover-not-underline:hover {
-    text-decoration: none;
-  }
+  &--hover-not-underline:hover { text-decoration: none; }
 }
 
-ul, ol {
-  list-style-type: none;
-}
+ul, ol { list-style-type: none; }
 
 /* Logo */
 .logo {
@@ -181,9 +175,7 @@ List have 2 type: vertical & horizontal.
     display: flex;
     height: 16px;
     align-items: center;
-    font-size: 13px;
-    line-height: 16px;
-    color: #A2A2A2;
+    @include txt(13px, #A2A2A2, 16px);
     &::before {
       content: url("../images/icon.png");
       display: flex;
@@ -194,11 +186,7 @@ List have 2 type: vertical & horizontal.
       margin-right: 5px;
     }
   }
-  &__body-footer-note {
-    font-size: 13px;
-    line-height: 16px;
-    color: #A2A2A2;
-  }
+  &__body-footer-note { @include txt(13px, #A2A2A2, 16px); }
 }
 
 /* button */
@@ -246,9 +234,7 @@ List have 2 type: vertical & horizontal.
     display: flex;
     align-items: center;
     &-note {
-      font-size: 13px;
-      line-height: 16px;
-      color: #A2A2A2;
+      @include txt(13px, #A2A2A2, 16px);
       display: flex;
       align-items: center;
       &::before {
