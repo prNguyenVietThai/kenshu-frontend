@@ -1,3 +1,45 @@
+.logo__frame, .logo__txt {
+  display: block; }
+
+.list, .list--horizontal {
+  width: 100%; }
+
+.release__list-item:not(:last-child)::after, .main-header__list-item:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 0px;
+  border: none;
+  border-top: 1px solid #BFC9D7;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg); }
+
+.form-search .input-form, .form-search .search {
+  outline: none; }
+
+.btn, .btn--primary {
+  width: 110px;
+  min-height: 38px;
+  border: none;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer; }
+
+.badge, .badge--more {
+  background-color: #F1F1F1;
+  border-radius: 13px;
+  padding: 4px 10px;
+  margin: 4px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #3B3B3B;
+  font-weight: normal; }
+
 a {
   color: inherit; }
 
@@ -29,9 +71,6 @@ ul, ol {
     align-items: inherit;
     text-decoration: none; }
 
-.logo__frame, .logo__txt {
-  display: block; }
-
 .logo__frame {
   width: 122px;
   height: 22px; }
@@ -45,9 +84,6 @@ ul, ol {
 List
 List have 2 type: vertical & horizontal.
 */
-.list, .list--horizontal {
-  width: 100%; }
-
 .list--horizontal {
   display: flex;
   align-items: center; }
@@ -59,17 +95,6 @@ List have 2 type: vertical & horizontal.
   display: flex;
   align-items: center; }
 
-.release__list-item:not(:last-child)::after, .main-header__list-item:not(:last-child)::after {
-  content: '';
-  display: block;
-  width: 13px;
-  height: 0px;
-  border: none;
-  border-top: 1px solid #BFC9D7;
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg); }
-
 /* form search */
 .form-search {
   box-sizing: border-box;
@@ -77,8 +102,6 @@ List have 2 type: vertical & horizontal.
   height: 30px;
   display: flex;
   align-items: center; }
-  .form-search .input-form, .form-search .search {
-    outline: none; }
   .form-search .input-form {
     border: none;
     width: 258px;
@@ -174,18 +197,6 @@ List have 2 type: vertical & horizontal.
     font-weight: normal; }
 
 /* button */
-.btn, .btn--primary {
-  width: 110px;
-  min-height: 38px;
-  border: none;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 2px;
-  font-size: 14px;
-  line-height: 25px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer; }
-
 .btn--primary {
   background: #3081C9;
   color: #FFFFFF; }
@@ -245,16 +256,6 @@ List have 2 type: vertical & horizontal.
     margin-left: 10px; }
 
 /* badge */
-.badge, .badge--more {
-  background-color: #F1F1F1;
-  border-radius: 13px;
-  padding: 4px 10px;
-  margin: 4px;
-  font-size: 12px;
-  line-height: 22px;
-  color: #3B3B3B;
-  font-weight: normal; }
-
 .badge--more {
   background-color: #FFFFFF;
   border: 1px solid #F1F1F1;

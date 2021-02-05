@@ -1,0 +1,13 @@
+@mixin timer-icon {
+  content: url("../images/icon.png");
+}
+@mixin search-button {
+  background: #3081C9 url("../images/search.png") no-repeat center;
+}
+
+@mixin txt($fontSize, $color, $lineHeight, $fontWeight: normal) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+  font-weight: $fontWeight;
+}
