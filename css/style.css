@@ -507,7 +507,7 @@ List have 2 type: vertical & horizontal.
     border-bottom: 1px solid #e4e4e4;
 }
 
-.keywords-list {
+.main__side-keywords-list {
     display: flex;
     flex-wrap: wrap;
 }
