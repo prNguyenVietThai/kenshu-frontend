@@ -12,6 +12,10 @@
   font-weight: $fontWeight;
 }
 
+a {
+  color: inherit;
+}
+
 .link {
   text-decoration: none;
   cursor: pointer;
@@ -24,7 +28,6 @@
     text-decoration: none;
   }
 }
-
 
 ul, ol {
   list-style-type: none;
@@ -121,9 +124,7 @@ List have 2 type: vertical & horizontal.
   }
 }
 
-.is-active > .link {
-  font-weight: bold;
-}
+.is-active > .link { font-weight: bold; }
 
 /* Box */
 .box {
@@ -164,39 +165,39 @@ List have 2 type: vertical & horizontal.
     position: relative;
     width: 100%;
     min-height: 118px;
-    &-title {
-      @include txt(13px, #3B3B3B, 18px);
-      padding: 8px 10px;
+  }
+  &__body-title {
+    @include txt(13px, #3B3B3B, 18px);
+    padding: 8px 10px;
+  }
+  &__body-footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px 10px 4px 10px;
+  }
+  &__body-footer-timer {
+    display: flex;
+    height: 16px;
+    align-items: center;
+    font-size: 13px;
+    line-height: 16px;
+    color: #A2A2A2;
+    &::before {
+      content: url("../images/icon.png");
+      display: flex;
+      width: 15px;
+      height: 14px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 5px;
     }
-    &-footer {
-      position: absolute;
-      bottom: 0px;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 2px 10px 4px 10px;
-      &-timer {
-        display: flex;
-        height: 16px;
-        align-items: center;
-        font-size: 13px;
-        line-height: 16px;
-        color: #A2A2A2;
-        &::before {
-          content: url("../images/icon.png");
-          display: flex;
-          width: 15px;
-          height: 14px;
-          align-items: center;
-          justify-content: center;
-          margin-right: 5px;
-        }
-      }
-      &-note {
-        font-size: 13px;
-        line-height: 16px;
-        color: #A2A2A2;
-      }
-    }
+  }
+  &__body-footer-note {
+    font-size: 13px;
+    line-height: 16px;
+    color: #A2A2A2;
   }
 }
 
