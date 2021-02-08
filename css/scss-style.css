@@ -1,7 +1,7 @@
 .logo__frame, .logo__txt {
   display: block; }
 
-.list, .list--horizontal {
+.list, .list--horizontal, .footer-term__list {
   width: 100%; }
 
 .release__list-item:not(:last-child)::after, .main-header__list-item:not(:last-child)::after {
@@ -15,7 +15,14 @@
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg); }
 
-.form-search .input-form, .form-search .search {
+.release__list-item, .main-header__list-item {
+  font-size: 13px;
+  line-height: 13px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center; }
+
+.form-search__input, .form-search__button {
   outline: none; }
 
 .btn, .btn--primary {
@@ -70,24 +77,19 @@ ul, ol {
     display: flex;
     align-items: inherit;
     text-decoration: none; }
+  .logo__frame {
+    width: 122px;
+    height: 22px; }
+  .logo__txt {
+    width: 335px;
+    vertical-align: middle;
+    margin-left: 15px; }
 
-.logo__frame {
-  width: 122px;
-  height: 22px; }
-
-.logo__txt {
-  width: 335px;
-  vertical-align: middle;
-  margin-left: 15px; }
-
-/*
-List
-List have 2 type: vertical & horizontal.
-*/
+/* List */
 .list--horizontal {
   display: flex;
   align-items: center; }
-.list .list__item {
+.list__item {
   font-size: 13px;
   line-height: 13px;
   color: #FFFFFF;
@@ -102,7 +104,7 @@ List have 2 type: vertical & horizontal.
   height: 30px;
   display: flex;
   align-items: center; }
-  .form-search .input-form {
+  .form-search__input {
     border: none;
     width: 258px;
     height: 30px;
@@ -110,9 +112,9 @@ List have 2 type: vertical & horizontal.
     background: #FFFFFF;
     border-radius: 4px 0px 0px 4px;
     padding-left: 15px; }
-    .form-search .input-form::placeholder {
+    .form-search__input::placeholder {
       color: #BBBBBB; }
-  .form-search .search {
+  .form-search__button {
     box-sizing: border-box;
     width: 30px;
     height: 30px;
@@ -121,7 +123,7 @@ List have 2 type: vertical & horizontal.
     background: #3081C9 url("../images/search.png") no-repeat center;
     border-radius: 0px 4px 4px 0px; }
 
-.is-active > .link {
+.is-active .link {
   font-weight: bold; }
 
 /* Box */
@@ -218,10 +220,8 @@ List have 2 type: vertical & horizontal.
     margin-bottom: 14px;
     font-size: 14px;
     line-height: 22px;
-    color: inherit;
+    color: #3B3B3B;
     font-weight: bold; }
-  .article__title {
-    color: #3B3B3B; }
   .article__image {
     position: absolute;
     top: 15px;
@@ -233,21 +233,21 @@ List have 2 type: vertical & horizontal.
     left: 0px;
     display: flex;
     align-items: center; }
-    .article__timer-note {
-      font-size: 13px;
-      line-height: 16px;
-      color: #A2A2A2;
-      font-weight: normal;
+  .article__timer-note {
+    font-size: 13px;
+    line-height: 16px;
+    color: #A2A2A2;
+    font-weight: normal;
+    display: flex;
+    align-items: center; }
+    .article__timer-note::before {
+      content: url("../images/icon.png");
       display: flex;
-      align-items: center; }
-      .article__timer-note::before {
-        content: url("../images/icon.png");
-        display: flex;
-        width: 15px;
-        height: 14px;
-        align-items: center;
-        justify-content: center;
-        margin-right: 5px; }
+      width: 15px;
+      height: 14px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 5px; }
   .article__timer-info {
     font-size: 13px;
     line-height: 13px;
@@ -260,24 +260,6 @@ List have 2 type: vertical & horizontal.
   background-color: #FFFFFF;
   border: 1px solid #F1F1F1;
   box-sizing: border-box; }
-
-.release__list-item, .main-header__list-item {
-  font-size: 13px;
-  line-height: 13px;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center; }
-
-.release__list-item:not(:last-child)::after, .main-header__list-item:not(:last-child)::after {
-  content: '';
-  display: block;
-  width: 13px;
-  height: 0px;
-  border: none;
-  border-top: 1px solid #BFC9D7;
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg); }
 
 /* header */
 .header {
@@ -389,11 +371,6 @@ List have 2 type: vertical & horizontal.
     justify-content: center; }
   .main__side {
     width: 312px; }
-    .main__side .keywords {
-      margin-top: 30px;
-      width: 100%;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #e4e4e4; }
   .main__side-title {
     font-size: 18px;
     line-height: 36px;
@@ -416,10 +393,10 @@ List have 2 type: vertical & horizontal.
   .footer__container {
     width: 1126px;
     margin: 0px auto; }
-    .footer__container > .copy-right {
-      font-size: 12px;
-      line-height: 12px;
-      color: #797979; }
+  .footer__copyright {
+    font-size: 12px;
+    line-height: 12px;
+    color: #797979; }
   .footer__list {
     padding-bottom: 20px;
     border-bottom: 1px solid #e4e4e4;
@@ -445,7 +422,16 @@ List have 2 type: vertical & horizontal.
 .footer-term {
   width: 100%;
   padding: 15px 0px; }
-  .footer-term .list__item {
+  .footer-term__list {
+    display: flex;
+    align-items: center; }
+  .footer-term__list-item {
+    font-size: 13px;
+    line-height: 13px;
+    color: #FFFFFF;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
     margin-right: 10px;
     color: #797979; }
 

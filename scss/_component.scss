@@ -1,6 +1,3 @@
-@import "abstracts/mixins";
-@import "abstracts/placeholders";
-
 a { color: inherit; }
 
 .link {
@@ -29,33 +26,29 @@ ul, ol { list-style-type: none; }
     align-items: inherit;
     text-decoration: none;
   }
+  &__frame {
+    @extend %block;
+    width: 122px;
+    height: 22px;
+  }
+
+  &__txt {
+    @extend %block;
+    width: 335px;
+    vertical-align: middle;
+    margin-left: 15px;
+  }
 }
 
-.logo__frame {
-  @extend %block;
-  width: 122px;
-  height: 22px;
-}
-
-.logo__txt {
-  @extend %block;
-  width: 335px;
-  vertical-align: middle;
-  margin-left: 15px;
-}
-
-/*
-List
-List have 2 type: vertical & horizontal.
-*/
-.list {
+/* List */
+.list  {
   @extend %list;
   &--horizontal {
     @extend %list;
     display: flex;
     align-items: center;
   }
-  & &__item {
+  &__item {
     @include txt(13px, #FFFFFF, 13px);
     display: flex;
     align-items: center;
@@ -69,7 +62,7 @@ List have 2 type: vertical & horizontal.
   height: 30px;
   display: flex;
   align-items: center;
-  .input-form {
+  &__input {
     border: none;
     width: 258px;
     height: 30px;
@@ -80,7 +73,7 @@ List have 2 type: vertical & horizontal.
     &::placeholder { color: #BBBBBB; }
     @extend %not-outline;
   }
-  .search {
+  &__button {
     box-sizing: border-box;
     width: 30px;
     height: 30px;
@@ -92,7 +85,7 @@ List have 2 type: vertical & horizontal.
   }
 }
 
-.is-active > .link { font-weight: bold; }
+.is-active .link { font-weight: bold; }
 
 /* Box */
 .box {
@@ -116,7 +109,6 @@ List have 2 type: vertical & horizontal.
     font-style: italic;
     @include txt(17px, #FFFFFF, 25px, bold);
     &:before {
-      content: '1';
       display: block;
       text-align: center;
       content: counter(number);
@@ -187,9 +179,8 @@ List have 2 type: vertical & horizontal.
     width: 265px;
     height: 66px;
     margin-bottom: 14px;
-    @include txt(14px, inherit, 22px, bold);
+    @include txt(14px, #3B3B3B, 22px, bold);
   }
-  &__title { color: #3B3B3B; }
   &__image {
     position: absolute;
     top: 15px;
@@ -202,19 +193,19 @@ List have 2 type: vertical & horizontal.
     left: 0px;
     display: flex;
     align-items: center;
-    &-note {
-      @include txt(13px, #A2A2A2, 16px);
+  }
+  &__timer-note {
+    @include txt(13px, #A2A2A2, 16px);
+    display: flex;
+    align-items: center;
+    &::before {
+      @include timer-icon;
       display: flex;
+      width: 15px;
+      height: 14px;
       align-items: center;
-      &::before {
-        @include timer-icon;
-        display: flex;
-        width: 15px;
-        height: 14px;
-        align-items: center;
-        justify-content: center;
-        margin-right: 5px;
-      }
+      justify-content: center;
+      margin-right: 5px;
     }
   }
   &__timer-info {

@@ -13,6 +13,13 @@
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
 }
+%listItem {
+  font-size: 13px;
+  line-height: 13px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
 %not-outline { outline: none; }
 %btn {
   width: 110px;
